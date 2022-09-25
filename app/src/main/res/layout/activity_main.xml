@@ -1,18 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/ic_baclground_game"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/img_enemy"
+        android:background="@drawable/shape_circle"
+        android:padding="@dimen/dim_padding_10"
+        android:layout_width="@dimen/dim_player"
+        android:layout_height="@dimen/dim_player"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-100dp"
+        android:rotation="180"
+        app:srcCompat="@drawable/ic_paper" />
+
+
+    <RelativeLayout
+        android:id="@+id/rv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/dim_padding_16">
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_background_score"
+            android:padding="@dimen/dim_padding_10"
+            android:text="@string/score"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dim_padding_16" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_background_score"
+            android:padding="@dimen/dim_padding_10"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"
+            android:text="@string/time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dim_padding_16" />
+
+    </RelativeLayout>
+
 
     <TextView
+        android:id="@+id/tv_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_background_return"
+        android:padding="@dimen/dim_padding_10"
+        android:textAlignment="center"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        tools:text="1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_mc"
+        android:layout_width="@dimen/dim_player"
+        android:background="@drawable/shape_circle"
+        android:padding="@dimen/dim_padding_10"
+        android:layout_height="@dimen/dim_player"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-150dp"
+        app:srcCompat="@drawable/ic_rock"
+        />
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/bg_button"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:padding="20dp"
+
+            >
+            <ImageView
+                android:id="@+id/btn_rock"
+                android:layout_width="60dp"
+                android:padding="@dimen/dim_padding_10"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_circle"
+                app:srcCompat="@drawable/ic_rock"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/btn_paper"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_circle"
+                android:padding="@dimen/dim_padding_10"
+                app:srcCompat="@drawable/ic_paper"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_rock"
+                app:layout_constraintRight_toLeftOf="@id/btn_scissor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/btn_scissor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_circle"
+                android:padding="@dimen/dim_padding_10"
+                app:srcCompat="@drawable/ic_scissor"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

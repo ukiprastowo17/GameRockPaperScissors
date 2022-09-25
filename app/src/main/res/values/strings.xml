@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">GameRockPaperScissors</string>
+    <string name="score">score %1$s</string>
+    <string name="time">time %1$s</string>
+    <string name="time_label">Time : %1$s</string>
+    <string name="score_label">Score : %1$s</string>
+    <string name="score_final_label">Score Final : %1$s</string>
+    <string name="get_to_ready">Siap siap</string>
+    <string name="result">Result</string>
+    <string name="restart">restart</string>
+
 </resources>
