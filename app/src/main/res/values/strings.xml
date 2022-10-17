@@ -3,10 +3,29 @@
     <string name="score">score %1$s</string>
     <string name="time">time %1$s</string>
     <string name="time_label">Time : %1$s</string>
-    <string name="score_label">Score : %1$s</string>
-    <string name="score_final_label">Score Final : %1$s</string>
+    <string name="score_label">%1$s - Score : %2$s</string>
+    <string name="score_final_label"> %1$s : %2$s VS  %3$s :  %4$s </string>
     <string name="get_to_ready">Siap siap</string>
     <string name="result">Result</string>
-    <string name="restart">restart</string>
+    <string name="restart">Main Lagi</string>
+    <string name="menu_back">Menu Utama</string>
+
+    <string name="set_name">SUBMIT</string>
+    <string name="your_name">Your name</string>
+    <string name="text_previous">Previous</string>
+    <string name="text_next">Next</string>
+    <string name="choose_game_mode">Choose Game Mode</string>
+    <string name="vs_player">VS Player</string>
+    <string name="vs_computer">VS Computer</string>
+    <string name="placeholder_title_menu_game">Hi %s ! \n Which one do you want to play ?</string>\
+    <string name="player_vs_computer">Player vs Computer</string>
+    <string name="player_vs_player">Player vs Player</string>
+    <string name="text_this_rock">Ini Adalah Batu</string>
+    <string name="desc_rock">Dia Akan Menang Melawan Gunting, Tapi Kalah Melawan Kertas</string>
+    <string name="text_this_paper">Ini Adalah Kertas</string>
+    <string name="desc_paper">Dia Akan Menang Melawan Batu, Tapi Kalah Melawan Gunting</string>
+    <string name="text_this_scissor">Ini Adalah Gunting</string>
+    <string name="desc_scissor">Dia Akan Menang Melawan Kertas, Tapi Kalah Melawan Batu</string>
+    <string name="text_title_input_name">Input your Name :</string>
 
 </resources>
