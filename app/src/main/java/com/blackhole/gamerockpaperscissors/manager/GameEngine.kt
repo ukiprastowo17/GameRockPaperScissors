@@ -53,14 +53,38 @@ class GameEngine {
         timer?.cancel()
     }
 
+    fun returnGame(scoreP1: Int, scoreP2 : Int) : String{
+        var returnGame = ""
+        returnGame = if (scoreP1 > scoreP2) {
+            dataRoutines.WIN
+        } else if (scoreP1 < scoreP2)
+            dataRoutines.LOSE
+        else{
+            dataRoutines.DRAW
+        }
+
+        return returnGame
+    }
+
+    fun playerNameEnemy(typePlayer : Boolean) : String {
+        return if (typePlayer){
+            "Player 2"
+        }else{
+            "Robot"
+        }
+
+    }
+
 
     fun random(from: Int, to: Int) : Int {
         return Random().nextInt(to - from) + from
     }
 
-    fun returnScore(tp: GameRole, curType: GameRole?, score : Int ) : GameScore {
-        var info:String = ""
+    fun returnScore(tp: GameRole, curType: GameRole?, score : Int,  scoreP2 : Int  ) : GameScore {
+        var info = ""
         var score = score
+        var scoreP2 = scoreP2
+
 
 
         when (curType) {
@@ -75,6 +99,7 @@ class GameEngine {
                     }
                     else -> {
                         info = dataRoutines.LOSE
+                        scoreP2+=10
                     }
                 }
             }
@@ -82,6 +107,7 @@ class GameEngine {
                 when (tp) {
                     GameRole.ROCK -> {
                         info = dataRoutines.LOSE
+                        scoreP2+=10
                     }
                     GameRole.PAPER -> {
                         info = dataRoutines.DRAW
@@ -100,6 +126,7 @@ class GameEngine {
                     }
                     GameRole.PAPER -> {
                         info = dataRoutines.LOSE
+                        scoreP2+=10
                     }
                     else -> {
                         info = dataRoutines.DRAW
@@ -109,7 +136,7 @@ class GameEngine {
         }
 
 
-        return GameScore(info, score )
+        return GameScore(info, score,  scoreP2 )
 
     }
 
